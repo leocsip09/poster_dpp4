@@ -47,7 +47,7 @@
 \leftlogo[0.70]{ucsm}
 \rightlogo[1]{Unimontes}
 \title{Molecular dynamics interaction study on natural DPP4-inhibitors} 
-\author{Stacanelli Camporioni, Isabela \textsuperscript{1}; Ponze Bellido, Leonardo\textsuperscript{2};Gomez Valdez, Badhin*.}
+\author{Stacanelli Camporioni, Isabela\textsuperscript{1}; Ponze Bellido, Leonardo\textsuperscript{2}; Gomez Valdez, Badhin*.}
 \institute{\textsuperscript{1}State University of Montes Claros, \textsuperscript{2}Catholic University of Santa Maria}
 \email{\textsuperscript{1}isabelacamporioni@hotmail.com, \textsuperscript{2}leonardo.ponze.bellido@gmail.com} 
 \conference{Centro de Investigación en Ingeniería Molecular, 05-30 enero, Arequipa, Perú.}
@@ -99,12 +99,13 @@ Diabetes mellitus is a chronic metabolic disorder characterized by persistent hy
 %therapeutic targets such as GLP-1 \cite{Fang2024} and 
 
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.9\textwidth]{DPP4.png}
+\begin{center}
+  \includegraphics[width=0.9\columnwidth]{DPP4.png}
   \captionof{figure}{Final DPP4 structure.}
   \label{fig-dpp4}
-\end{figure}
+\end{center}
+
+
 
   \section*{Methodology}
 The present study focuses on several platforms and software tools, including the Protein Data Bank (PDB), Chimera, GROMACS, Gaussian. The DPP4 and GLP-1 protein structures had already been analyzed using ChimeraX and GROMACS software. A search for known natural ligands resulted in a total of 52 candidate compounds. SMILES notation and three-dimensional structures of the ligands were retrieved and verified through PubChem, Lotus, and Coconut databases. In the research,  twenty two natural potential DPP4 inhibitors were selected. The ligands were previously prepared through structural cleaning and geometric optimization using the Gaussian 16 software. The optimized ligands were converted to the PDBQT format for molecular docking. During this step, polar hydrogens were added and nonpolar hydrogens were merged according to AutoDock Vina requirements. Docking simulations were then performed using AutoDock Vina, generating 30 binding poses per ligand with a maximum of 1000 steps per run. The 5 best-ranked binding ligands were selected based on binding affinity scores from the DPP4 ligands (isoquercitrin (L1), rutin (L2), a-muurolene (L3), marmesinin (L4) and a flavone derivative (L5)), with values between -10.031 to -8.209 kcal/mol, which shows they had a good binding potential.
@@ -124,30 +125,35 @@ These selected complexes were further processed in Chimera, where hydrogens were
 %"Para validar o protocolo de docking molecular e estabelecer um benchmark robusto de afinidade de ligação, selecionou-se um conjunto de 17 inibidores de DPP-4 (gliptinas), que representam o culminar de 17 anos de pesquisa e desenvolvimento (1998–2014) no tratamento do Diabetes Tipo 2. A escolha deste conjunto específico como controle positivo justifica-se por três fatores principais. Diversidade Estrutural e Química: As 17 gliptinas abrangem as principais classes químicas de inibidores da DPP-4, incluindo cianopirrolidinas (ex: Vildagliptina, Saxagliptina), xantinas (ex: Linagliptina), diprolil (ex: Teneligliptina) e pirimidinedionas (ex: Alogliptina). Essa variabilidade estrutural permite avaliar a capacidade do algoritmo de docking em predizer corretamente poses de ligação para diferentes esqueletos químicos ("scaffolds"), garantindo que o protocolo não seja enviesado para um único tipo de estrutura molecular. Modos de Ligação Caracterizados: Os mecanismos de interação destas gliptinas com o sítio ativo da DPP-4 estão bem documentados, envolvendo ocupações críticas nos bolsões S1, S2 e S2-extenso, bem como interações de ponte salina com os resíduos Glu205 e Glu206. A reprodução in silico destas interações conhecidas serve como validação essencial da acurácia do método, conforme sugerido por estratégias computacionais que utilizam fármacos aprovados (como a Saxagliptina) para comparar a eficácia de novos compostos. Relevância Clínica e Farmacológica: O grupo inclui tanto fármacos já aprovados por agências reguladoras (FDA/EMA) quanto compostos em fases avançadas de estudos clínicos, com valores de IC50​ experimentais conhecidos que variam na faixa nanomolar (ex: Sitagliptina IC50​=18 nM; Linagliptina IC50​=1.0 nM). Isso permite não apenas uma validação estrutural, mas também uma correlação comparativa de scores de energia livre de ligação com a potência biológica real.
 
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{Compounds.png}
+\begin{center}
+  \includegraphics[width=0.8\columnwidth]{Compounds.png}
   \captionof{figure}{Natural ligands selected for the molecular dynamics.}
   \label{fig-ligands}
-\end{figure}
-\\
+\end{center}
+
+
+%\begin{center}
+%  \includegraphics[width=0.9\columnwidth]{DPP4.png}
+% \captionof{figure}{Final DPP4 structure.}
+%  \label{fig-dpp4}
+%\end{center}
+
 \section*{Results and Discussion}
 
+Figure \ref{fig:dpp4_pockets} shows the main binding pockets of DPP4 identified after the blind docking simulations. Once the ten best-ranked ligands were obtained, the five compounds with the most favorable binding affinities (L1--L5) were selected for a detailed analysis of their binding sites. Visual inspection and pocket characterization were performed using ChimeraX, allowing the identification of the binding cavity each ligand occupies. The docking results revealed that several ligands occupied the same binding pocket, suggesting the presence of energetically favorable regions within the DPP4 structure. Ligands L2 (rutin) and L3 ($\alpha$-muurolene) were found to bind within the same cavity, characterized mainly by the residues Trp201, Pro257, Asp663, Glu205, and His740. Similarly, ligands L4 (marmesinin) and L5 (flavone derivative) also docked into a common pocket formed by Glu232, Asp200, Asp230, Pro264, and Thr231. In contrast, L1 (isoquercitrin) occupied a distinct binding cavity involving residues Phe228, Glu232, Thr199, Asp200, and Pro255. Although this ligand showed the highest binding affinity in the docking stage.
 
-Figure \ref{fig:dpp4_pockets} shows the DPP4 pockets where the ligands bind.
 
-\begin{figure}[htbp]
-\centering
+\begin{center}
 \includegraphics[width=1\columnwidth]{DPP4_DOCK.png}
 \vspace{-1.0cm}
 \captionof{figure}{DPP4 pockets.}
 \label{fig:dpp4_pockets}
-\end{figure}
+\end{center}
+
 \vspace{-1.0cm}
 
 \vspace{0.0cm}
-\begin{figure}[htbp]
-\centering
+\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
     ybar,
@@ -185,36 +191,43 @@ Figure \ref{fig:dpp4_pockets} shows the DPP4 pockets where the ligands bind.
 \end{tikzpicture}
 \captionof{figure}{The 10 best results after blind docking.}
 \label{fig:barplot}
-\end{figure}
-\vspace{-1.0cm}
+\end{center}
 
 %Blind docking simulations were performed using Vina, giving the best ligands and their binding poses. Following docking analysis, the five ligands with the most negative binding affinities (L1-L5) were selected for further study using Vina to predict their binding modes and affinities. The three-dimensional structures of these ligands were cross-checked against their PubChem counterparts, and hydrogens were added using ChimeraX. OPLS force field parameters for the two best ligands were generated using LigParGen, obtaining the necessary .gro and .itp files. Gaussian 16 software was employed to analyze the Hirshfeld charges of the three ligands, providing insight into electronic distribution to correct the ligand topology charges. 
 
-Figure \ref{fig:barplot} shows the RMSD and RMSF of this equilibrium showing an excellent stable conformation. Figure \ref{fig:RMSD} shows that the stable state of the protein (RMSF).
-During the RMSD and RMSF analysis, shown in Figure \ref{fig:RMSF} it was observed that L1 (isoquercitrin) destabilized the protein the most between 40 ns to 60ns. The other 4 ligands kept the protein in a fairly stable state. 
+The structural stability of the DPP4--ligand complexes was evaluated through root mean square deviation (RMSD) and root mean square fluctuation (RMSF) analyses over 100 ns of molecular dynamics simulations. RMSD provides information on the overall conformational stability of the protein backbone during the simulation, while RMSF describes the flexibility of individual residues around their average positions.
 
-\vspace{-1.0cm}
-\begin{figure}[htbp]
-\centering 
+As shown in Figure \ref{fig:RMSD}, most complexes reached a stable RMSD profile after an initial equilibration period, indicating that the protein maintained a stable global conformation in the presence of the majority of the ligands. However, the complex formed with L1 (isoquercitrin) showed a noticeable increase in RMSD between 40 ns and 60 ns, suggesting a transient destabilization of the protein structure during this time interval. After this period, the system seems to recover and reaches a new equilibrium state.
+
+The RMSF profiles presented in Figure \ref{fig:RMSF} indicate moderate residue-level fluctuations along the protein chain, consistent with a stable folded structure throughout the simulations. Overall, the molecular dynamics results support that, except for the temporary perturbation observed with L1, the remaining ligand-bound complexes preserved the structural integrity of DPP4 during the simulation timeframe.
+
+\vspace{0.0cm}
+\begin{center}
 \includegraphics[width=1\columnwidth]{figures/DPP4-multiplot-rmsd-best.pdf}
 \vspace{0.3cm}
 \vspace{-1.0cm}
 \captionof{figure}{DPP4-ligands RMSD (top) and RMSF (bottom) after 100 ns.}
 \label{fig:RMSD}
-\end{figure}
+\end{center}
+
 \vspace{1.0cm}
 \vspace{-1.0cm}
-\begin{figure}[htbp]
-\centering 
+\begin{center}
 \includegraphics[width=1\columnwidth]{figures/DPP4-multiplot-rmsf-best.pdf}
 \vspace{0.3cm}
 \vspace{-1.0cm}
 \captionof{figure}{DPP4-ligands RMSD (top) and RMSF (bottom) after 100 ns.}
 \label{fig:RMSF}
-\end{figure}
+\end{center}
 \vspace{1.0cm}
 
-The reactivity of each ligand was analyzed and as shown in Figure \ref{fig:mmpbsa_stacked}. L5 (a flavone derivative) displayed the most negative energy out of all of them, meaning that it is the most reactive. L4 (marmesinin) had the second best reactivity, with a very small difference from L5.
+The reactivity of each ligand was analyzed and as shown in Figure \ref{fig:mmpbsa_stacked} and more specific in Table \ref{table}. L5 (a flavone derivative) displayed the most negative energy out of all of them, meaning that it is the most reactive. L4 (marmesinin) had the second best reactivity, with a very small difference from L5.
+
+The binding free energy of the DPP4--ligand complexes was further evaluated using MMPBSA calculations. The energy decomposition results are presented in Figure \ref{fig:mmpbsa_stacked}, while the corresponding total binding free energies ($\Delta G_{\mathrm{bind}}$) are summarized in Table \ref{table}. These analyses provide a estimation of ligand affinity by accounting for van der Waals, electrostatic, polar solvation, and nonpolar solvation contributions.
+
+Among the evaluated compounds, L5 (flavone derivative) exhibited the most favorable binding free energy ($\Delta G_{\mathrm{bind}} = -42.68$ kcal/mol), indicating the strongest interaction with DPP4. L4 (marmesinin) showed the second most favorable binding profile, with a binding free energy of $-40.07$ kcal/mol, differing only slightly from that of L5. This close energetic proximity suggests that both ligands establish similarly stable interactions within the DPP4 binding pocket.
+
+The remaining ligands displayed progressively less favorable binding free energies, with $\alpha$-muurolene (L3) showing moderate affinity, followed by rutin (L2) and isoquercitrin (L1), which presented weaker interactions with the protein. Overall, the MMPBSA results are consistent with the docking and molecular dynamics analyses, reinforcing L5 and L4 as the most promising candidates in terms of binding strength.
 
 \vspace{0.0cm}
 % \begin{figure}[htbp]
@@ -304,17 +317,16 @@ The reactivity of each ligand was analyzed and as shown in Figure \ref{fig:mmpbs
 % \end{figure} 
 % \vspace{0.0cm}
 
-\begin{figure}[htbp]
-\centering 
+\begin{center}
 \includegraphics[width=1\columnwidth]{figures/mmpbsa_stacked.pdf}
 \captionof{figure}{DPP4-ligands MMPBSA energy decomposition.}
 \label{fig:mmpbsa_stacked}
-\end{figure}
+\end{center}
 
 \begin{table}
 \begin{center}
 \begin{tabular}{lrr}\toprule
-Compound   &  $\Delta G_{\mathrm{bind}}$ \\\midrule
+Ligand   &  $\Delta G_{\mathrm{bind}}$ \\\midrule
 Flavone derivative (L5) &  -42.68\\ 
 Marmesinin (L4) &  -40.07 \\
 A-muurolene (L3) & -39.19  \\
@@ -323,6 +335,7 @@ Isoquercitrin (L1)      & -24.67
 \\\bottomrule
 \end{tabular}
 \end{center}
+\label{table}
 \end{table}
 
 The toxicity profiles of the top five ligands were evaluated using in silico ADMET 3.0 analysis, revealing heterogeneous patterns. All compounds displayed high skin sensitization potential. Rutin (L2) emerged as the most toxic, showing strong hepatotoxic, mutagenic, and cytotoxic tendencies. Isoquercitrin also presented significant genotoxicity, while 5,4'-Dihydroxy-3,3'-dimethoxy-7-prenyloxyflavone (L5) exhibited moderate hepatotoxic and carcinogenic risks. $\alpha$-Muurolene (L3) showed a narrower toxicity profile, primarily affecting skin and eyes, whereas Marmesinin (L4) demonstrated considerable hepatotoxic and genotoxic potential. These findings suggest that the $\alpha$-Muurolene is the safest one based on the ADMET analysis.
@@ -343,7 +356,7 @@ This study evaluated the interaction of natural ligands with GLP-1, a key target
 
 
 \section*{Acknowledgement}%{acknowledgement}
-This study was conducted under the surveillance of Professor Badhin, in the computational laboratory of the Catholic University of Santa Maria. We would like to thank Professor Badhin for the hospitality and kindness, allowing the realization of the internship and to learn about molecular engineering, its importance, and the opportunity to grow in a enriching research environment. We are also grateful for the computational infrastructure that facilitated our analysis. We thank our tutors and colleagues for their patience invaluable guidance, feedback, and collaboration.  %------------------------------------------------------------------------------
+This study was conducted under the surveillance of Professor Badhin, in the Center of Investigation of Molecular Engineering of the Catholic University of Santa Maria. We would like to thank Professor Badhin for the hospitality and kindness, allowing the realization of the internship and to learn about molecular engineering, its importance, and the opportunity to grow in a enriching research environment. We are also grateful for the computational infrastructure that facilitated our analysis. We thank our tutors and colleagues for their patience invaluable guidance, feedback, and collaboration.  %------------------------------------------------------------------------------
   \bibliography{references}
   \bibliographystyle{JAmChemSoc}
   
