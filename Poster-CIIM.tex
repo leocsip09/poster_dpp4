@@ -101,17 +101,17 @@ Diabetes mellitus is a chronic metabolic disorder characterized by persistent hy
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{Captura desde 2026-01-20 11-34-34.png}
+  \includegraphics[width=0.9\textwidth]{DPP4.png}
   \captionof{figure}{Final DPP4 structure.}
   \label{fig-dpp4}
 \end{figure}
 
   \section*{Methodology}
-The present study focuses on several platforms and software tools, including the Protein Data Bank (PDB), Chimera, GROMACS, Gaussian, Web of Science, LaTeX, JabRef. The DPP4 and GLP-1 protein structures had already been analyzed using ChimeraX and GROMACS software. A search for known natural ligands resulted in a total of 52 candidate compounds. SMILES notation and three-dimensional structures of the ligands were retrieved and verified through PubChem, Lotus, and Coconut databases. In the research,  twenty two natural potential DPP4 inhibitors were selected. The ligands were previously prepared through structural cleaning and geometric optimization using the Gaussian 16 software. The optimized ligands were converted to the PDBQT format for molecular docking. During this step, polar hydrogens were added and nonpolar hydrogens were merged according to AutoDock Vina requirements. Docking simulations were then performed using AutoDock Vina, generating 30 binding poses per ligand with a maximum of 1000 steps per run. The 5 best-ranked binding ligands were selected based on binding affinity scores from the DPP4 ligands (isoquercitrin (L1), rutin (L2), a-muurolene (L3), marmesinin (L4) and a flavone derivative (L5)), with values between -10.031 to -8.209 kcal/mol, which shows they had a good binding potential.
+The present study focuses on several platforms and software tools, including the Protein Data Bank (PDB), Chimera, GROMACS, Gaussian. The DPP4 and GLP-1 protein structures had already been analyzed using ChimeraX and GROMACS software. A search for known natural ligands resulted in a total of 52 candidate compounds. SMILES notation and three-dimensional structures of the ligands were retrieved and verified through PubChem, Lotus, and Coconut databases. In the research,  twenty two natural potential DPP4 inhibitors were selected. The ligands were previously prepared through structural cleaning and geometric optimization using the Gaussian 16 software. The optimized ligands were converted to the PDBQT format for molecular docking. During this step, polar hydrogens were added and nonpolar hydrogens were merged according to AutoDock Vina requirements. Docking simulations were then performed using AutoDock Vina, generating 30 binding poses per ligand with a maximum of 1000 steps per run. The 5 best-ranked binding ligands were selected based on binding affinity scores from the DPP4 ligands (isoquercitrin (L1), rutin (L2), a-muurolene (L3), marmesinin (L4) and a flavone derivative (L5)), with values between -10.031 to -8.209 kcal/mol, which shows they had a good binding potential.
 
 %https://www.microbiochemjournal.com/articles/ijcmbt-aid1008.pdf > A threshold of –5.5 kcal/mol (binding affinity) was set for the ligand-protein complexes for screening the effectively docked phytochemical. the highest affinity in experimentally validated inhibitors was-6.3 kcal/mol. This was set as threshold to screen potent and novel inhibitors from the set of phytochemicals, selected in this study.\textbf{} Kalhotra et al. (2018/2023) ou estudos similares em Frontiers in Pharmacology.
 
-These selected complexes were further processed in Chimera, where hydrogens were added to the ligands to ensure proper protonation. Ligand topologies and parameters were then generated using the LigParGen server, which provided OPLS-compatible force field parameters, including ligand topology files (.itp), and structure files (.gro), for subsequent molecular dynamics simulations. Hirshfeld atomic charges were calculated for the ligands using Gaussian 16. The resulting charges were adjusted to ensure overall charge neutrality of each ligand and were subsequently incorporated into the ligand topology files for molecular dynamics simulations. After that, molecular dynamics simulations were carried out using GROMACS. The systems were subjected to energy minimization, followed by equilibration under NVT and NPT ensembles, and then to steered molecular dynamics (SMD) simulations. RMSD and RMSF analyses were performed on the GROMACS trajectories to evaluate the global stability and residue-wise flexibility of the protein–ligand complexes. Binding free energy calculations were then conducted using the Molecular Mechanics Poisson-Boltzmann Surface Area (MM/PBSA) method based on simulation snapshots to obtain refined binding affinity estimates beyond static docking performed in gmx\_MMPBSA. 
+These selected complexes were further processed in Chimera, where hydrogens were added to the ligands to ensure proper protonation. Ligand topologies and parameters were then generated using the LigParGen server, which provided OPLS-compatible force field parameters, including ligand topology files (.itp), and structure files (.gro), for subsequent molecular dynamics simulations. Hirshfeld atomic charges were calculated for the ligands using Gaussian 16. The resulting charges were adjusted to ensure overall charge neutrality of each ligand and were subsequently incorporated into the ligand topology files for molecular dynamics simulations. After that, molecular dynamics simulations were carried out using GROMACS. The systems were subjected to energy minimization, followed by equilibration under NVT and NPT ensembles, and then to steered molecular dynamics (SMD) simulations. RMSD and RMSF analyses were performed on the GROMACS trajectories to evaluate the global stability and residue-wise flexibility of the protein–ligand complexes. Binding free energy calculations were then conducted using the Molecular Mechanics Poisson-Boltzmann Surface Area (MM/PBSA) method based on simulation snapshots to obtain refined binding affinity estimates beyond static docking performed in gmx\_MMPBSA. \newline\newline Figure \ref{fig-dpp4} shows the final stable state of the DPP4.
 
 %CGENFF
 %charm guii > force field, for lipids ---> gromacs
@@ -127,21 +127,21 @@ These selected complexes were further processed in Chimera, where hydrogens were
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{Compounds.png}
-  \captionof{figure}{Natural ligands selected for the dynamics.}
+  \captionof{figure}{Natural ligands selected for the molecular dynamics.}
   \label{fig-ligands}
 \end{figure}
-
+\\
 \section*{Results and Discussion}
 
-Figure \ref{fig-dpp4} shows the final stable state of the DPP4 and Figure \ref{fig:barplot} shows the RMSD and RMSF of this equilibrium showing an excellent stable conformation. Figure \ref{fig:RMSD} shows that the stable state of the protein (RMSF).
-  
-\vspace{-2.0cm}
+
+Figure \ref{fig:dpp4_pockets} shows the DPP4 pockets where the ligands bind.
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\columnwidth]{DPP4_DOCK.png}
 \vspace{-1.0cm}
-\captionof{figure}{DPP4 500ns equilibrium NPT.}
-\label{fig:dpp4_multiplot}
+\captionof{figure}{DPP4 pockets.}
+\label{fig:dpp4_pockets}
 \end{figure}
 \vspace{-1.0cm}
 
@@ -190,7 +190,7 @@ Figure \ref{fig-dpp4} shows the final stable state of the DPP4 and Figure \ref{f
 
 %Blind docking simulations were performed using Vina, giving the best ligands and their binding poses. Following docking analysis, the five ligands with the most negative binding affinities (L1-L5) were selected for further study using Vina to predict their binding modes and affinities. The three-dimensional structures of these ligands were cross-checked against their PubChem counterparts, and hydrogens were added using ChimeraX. OPLS force field parameters for the two best ligands were generated using LigParGen, obtaining the necessary .gro and .itp files. Gaussian 16 software was employed to analyze the Hirshfeld charges of the three ligands, providing insight into electronic distribution to correct the ligand topology charges. 
 
-
+Figure \ref{fig:barplot} shows the RMSD and RMSF of this equilibrium showing an excellent stable conformation. Figure \ref{fig:RMSD} shows that the stable state of the protein (RMSF).
 During the RMSD and RMSF analysis, shown in Figure \ref{fig:RMSF} it was observed that L1 (isoquercitrin) destabilized the protein the most between 40 ns to 60ns. The other 4 ligands kept the protein in a fairly stable state. 
 
 \vspace{-1.0cm}
@@ -315,17 +315,17 @@ The reactivity of each ligand was analyzed and as shown in Figure \ref{fig:mmpbs
 \begin{center}
 \begin{tabular}{lrr}\toprule
 Compound   &  $\Delta G_{\mathrm{bind}}$ \\\midrule
-Isoquercitrin (L1)      & -24.67 \\
-Rutin (L2)      & -31.11 \\
-A-muurolene (L3) & -39.19  \\
+Flavone derivative (L5) &  -42.68\\ 
 Marmesinin (L4) &  -40.07 \\
-Flavone derivative (L5) &  -42.68 
+A-muurolene (L3) & -39.19  \\
+Rutin (L2)      & -31.11 \\
+Isoquercitrin (L1)      & -24.67 
 \\\bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-The toxicity profiles of the top five ligands were evaluated using in silico ADMET 3.0 analysis, revealing heterogeneous patterns. All compounds displayed high skin sensitization potential. Rutin (L2)emerged as the most toxic, showing strong hepatotoxic, mutagenic, and cytotoxic tendencies. Isoquercitrin also presented significant genotoxicity, while 5,4'-Dihydroxy-3,3'-dimethoxy-7-prenyloxyflavone (L5) exhibited moderate hepatotoxic and carcinogenic risks. $\alpha$-Muurolene (L3) showed a narrower toxicity profile, primarily affecting skin and eyes, whereas Marmesinin (L4) demonstrated considerable hepatotoxic and genotoxic potential. These findings suggest that the $\alpha$-Muurolene is the safest one based on the ADMET analysis.
+The toxicity profiles of the top five ligands were evaluated using in silico ADMET 3.0 analysis, revealing heterogeneous patterns. All compounds displayed high skin sensitization potential. Rutin (L2) emerged as the most toxic, showing strong hepatotoxic, mutagenic, and cytotoxic tendencies. Isoquercitrin also presented significant genotoxicity, while 5,4'-Dihydroxy-3,3'-dimethoxy-7-prenyloxyflavone (L5) exhibited moderate hepatotoxic and carcinogenic risks. $\alpha$-Muurolene (L3) showed a narrower toxicity profile, primarily affecting skin and eyes, whereas Marmesinin (L4) demonstrated considerable hepatotoxic and genotoxic potential. These findings suggest that the $\alpha$-Muurolene is the safest one based on the ADMET analysis.
 
 %1. Rutin (L2)Among all evaluated ligands, Rutin (L2) exhibited the most severe and broad-spectrum toxicity profile, presenting substantial barriers to therapeutic applicability without optimization. Hepatotoxicity: The compound showed the highest probability of drug-induced liver injury (DILI) at 93.7%, highlighting a critical risk of hepatotoxicity. Genetic and Cellular Toxicity: Rutin demonstrated considerable risks for AMES mutagenicity (75.0%) and genotoxicity (86.8%). Additionally, cytotoxicity against A549 lung carcinoma cells was predicted at 86.0%.  Other Endpoints: The safety profile is further burdened by extremely high probabilities of skin sensitization (99.7%), eye irritation (90.0%), and ototoxicity (88.4%).
 
